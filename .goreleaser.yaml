@@ -54,7 +54,7 @@ release:
 
 brews:
   - name: cli-mate
-    github:
+    tap:
       owner: yuldoshevgg               # Replace with your GitHub username
       name: homebrew-cli-tools    # Your Homebrew tap repo (create it if not exists)
     description: "CLI weather tool"
