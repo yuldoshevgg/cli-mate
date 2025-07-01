@@ -51,3 +51,15 @@ release:
     ---
 
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
+
+brews:
+  - name: cli-mate
+    tap:
+      owner: yuldoshevgg               # Replace with your GitHub username
+      name: homebrew-cli-tools    # Your Homebrew tap repo (create it if not exists)
+    description: "CLI weather tool"
+    homepage: "https://github.com/yuldoshevgg/cli-mate"
+    install: |
+      bin.install "cli-mate"
+    test: |
+      cli-mate --help
