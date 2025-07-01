@@ -1,3 +1,4 @@
 .env
 # Added by goreleaser init:
 dist/
+vendor/
