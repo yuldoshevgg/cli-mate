@@ -1,28 +1,32 @@
+version: 2
 builds:
-  - env:
-      - CGO_ENABLED=0
+  - binary: askcloudhelloworld
     goos:
-      - linux
       - darwin
+      - linux
     goarch:
       - amd64
       - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
 
 release:
-  prerelease: true
+  prerelease: auto
 
-univeral_binaries:
+universal_binaries:
   - replace: true
 
-brews:
+homebrew_casks:
   - name: cli-mate
     homepage: "https://github.com/yuldoshevgg/cli-mate"
-    tap:
+    repository:
       owner: yuldoshevgg             
       name: homebrew-cli-tools 
     commit_author: 
       name: yuldoshevgg
       email: yuldoshevgg@gmail.com
     
-checksums:
+checksum:
   name_template: 'checksums.txt'
