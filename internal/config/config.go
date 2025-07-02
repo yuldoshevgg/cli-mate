@@ -9,8 +9,9 @@ import (
 )
 
 type Config struct {
-	APIKey string `env:"API_KEY"`
-	URL    string `env:"URL"`
+	APIKey      string `env:"API_KEY"`
+	URL         string `env:"URL"`
+	GithubToken string `env:"GITHUB_TOKEN"`
 }
 
 func Load() *Config {

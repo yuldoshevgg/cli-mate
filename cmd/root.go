@@ -50,6 +50,8 @@ func runRoot(cmd *cobra.Command, args []string) {
 		log.Fatalf("failed to get weather: %v", err)
 	}
 
+	fmt.Printf("\n\n github_token: %v, api_key: %v, url: %v\n\n", cfg.GithubToken, cfg.APIKey, cfg.URL)
+
 	fmt.Printf("📍 %v %v°C\n💨 %v m/s\n💧 %v%%\n🌅 Sunrise: %v\n🌆 Sunset: %v\n\nAir Pollution Index: %v %v%v\n",
 		location.City,
 		int32(weather.Main.Temp),
