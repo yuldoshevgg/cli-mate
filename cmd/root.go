@@ -16,7 +16,7 @@ var (
 )
 
 var (
-	version string = "2.1.1"
+	version string = "1.0"
 	Debug   bool
 	rootCmd = cobra.Command{
 		Use:     "cli-mate",
