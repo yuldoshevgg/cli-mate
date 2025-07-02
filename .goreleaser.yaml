@@ -8,6 +8,9 @@ before:
     - go generate ./...
     
 builds:
+  - main: ./cmd/root.go
+    ldflags:
+      - -s -w -X main.Version={{.Version}}
   - binary: askcloudhelloworld
     goos:
       - darwin
